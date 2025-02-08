@@ -1,0 +1,689 @@
+{
+	"info": {
+		"_postman_id": "39fd5ee5-a62a-42a9-8be4-0c4d89e0451d",
+		"name": "Adoption",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "37956957"
+	},
+	"item": [
+		{
+			"name": "agregarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Denis",
+							"type": "text"
+						},
+						{
+							"key": "surname",
+							"value": "Vela",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "dvela",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "DeniS1234@",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "dvela@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "4554-5665",
+							"type": "text"
+						},
+						{
+							"key": "profilePicture",
+							"type": "file",
+							"src": "/C:/Users/DELL/Downloads/equidad.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "agregarMascota",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Roko",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Es un snauser cafe bien bonito",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "Snauser",
+							"type": "text"
+						},
+						{
+							"key": "keeper",
+							"value": "67a6a809108da1ecd257396d",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/v1/animal/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"animal",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtenerMascotas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2636/v1/animal/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"animal",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buscarMascota",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2636/v1/animal/get/67a6a880108da1ecd2573973",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"animal",
+						"get",
+						"67a6a880108da1ecd2573973"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "actualizarMascota",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Kaly",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Es un snauser cafe",
+							"type": "text"
+						},
+						{
+							"key": "age",
+							"value": "8",
+							"type": "text"
+						},
+						{
+							"key": "keeper",
+							"value": "679d282ed9bc29a981d3d8fc",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/v1/animal/update/67a6a880108da1ecd2573973",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"animal",
+						"update",
+						"67a6a880108da1ecd2573973"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "eliminarMascota",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:2636/v1/animal/delete/67a6a8d9108da1ecd257397d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"animal",
+						"delete",
+						"67a6a8d9108da1ecd257397d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "testeartoken",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjc5ZDI4MmVkOWJjMjlhOTgxZDNkOGZjIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3MzgzNTMxMzcsImV4cCI6MTczODM2MzkzN30.hQw9Oqlz0okmLo2akKFg-nPxXDJAF2jBgHDzvFGENwY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "http://localhost:2636/test",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cambiarPassword",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "newPassword",
+							"value": "DeniS4321@",
+							"type": "text"
+						},
+						{
+							"key": "oldPassword",
+							"value": "DeniS1234@",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/v1/user/updatePassword/67a6a809108da1ecd257396d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"user",
+						"updatePassword",
+						"67a6a809108da1ecd257396d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "dvela",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "DeniS1234@",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AgregarCita",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "date",
+							"value": "06/02/2026",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "67a6a809108da1ecd257396d",
+							"type": "text"
+						},
+						{
+							"key": "animal",
+							"value": "67a6a880108da1ecd2573973",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/v1/appo/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"appo",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListarCitas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2636/v1/appo/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"appo",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cita",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2636/v1/appo/get/67a6a9d3108da1ecd257398f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"appo",
+						"get",
+						"67a6a9d3108da1ecd257398f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar cita",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "date",
+							"value": "1970-02-26",
+							"type": "text"
+						},
+						{
+							"key": "user",
+							"value": "679ce82f826df9843de1a403",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "animal",
+							"value": "67a5705af1fd3bc4349d0b86",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/v1/appo/put/67a6a9d3108da1ecd257398f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"appo",
+						"put",
+						"67a6a9d3108da1ecd257398f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Eliminar Cita",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2636/v1/appo/delete/67a6a9d3108da1ecd257398f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"appo",
+						"delete",
+						"67a6a9d3108da1ecd257398f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obtener Usuarios",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2636/v1/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BuscarUsuario",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2636/v1/user/get/67a6a809108da1ecd257396d",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"user",
+						"get",
+						"67a6a809108da1ecd257396d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ActualizarUsuario",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Denis Alfredo",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "dvela",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2636/v1/user/update/67a6a6a7108da1ecd2573961",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"user",
+						"update",
+						"67a6a6a7108da1ecd2573961"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AliminarUsuario",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "autorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWlkIjoiNjdhNmE2YTcxMDhkYTFlY2QyNTczOTYxIiwidXNlcm5hbWUiOiJkdmVsYSIsIm5hbWUiOiJEZW5pcyIsInJvbGUiOiJDTElFTlQiLCJpYXQiOjE3Mzg5NzQ5MTMsImV4cCI6MTczODk4NTcxM30.X6uazjd5VV8u0CDbL2dht6kdorIDSjOUJMSx4cxnY2g",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2636/v1/user/delete/67a6a6a7108da1ecd2573961",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2636",
+					"path": [
+						"v1",
+						"user",
+						"delete",
+						"67a6a6a7108da1ecd2573961"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
